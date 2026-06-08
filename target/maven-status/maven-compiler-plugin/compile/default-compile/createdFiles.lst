@@ -1,0 +1,10 @@
+com\example\taskreview\tasks\ReviewResponse.class
+com\example\taskreview\tasks\TaskRow.class
+com\example\taskreview\tasks\TaskCheck.class
+com\example\taskreview\TaskReviewServiceApplication.class
+com\example\taskreview\tasks\PriorityLevel.class
+com\example\taskreview\tasks\TaskController.class
+com\example\taskreview\tasks\TaskResponse.class
+com\example\taskreview\tasks\ReviewStatus.class
+com\example\taskreview\tasks\TaskService.class
+com\example\taskreview\tasks\ReviewRequest.class
