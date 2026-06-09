@@ -8,3 +8,4 @@ com\example\taskreview\tasks\TaskResponse.class
 com\example\taskreview\tasks\ReviewStatus.class
 com\example\taskreview\tasks\TaskService.class
 com\example\taskreview\tasks\ReviewRequest.class
+com\example\taskreview\tasks\FilterOptionsResponse.class

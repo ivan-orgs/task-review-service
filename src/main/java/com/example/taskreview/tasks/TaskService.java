@@ -1,6 +1,7 @@
 package com.example.taskreview.tasks;
 
 import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -58,6 +59,26 @@ public class TaskService {
             .toList();
 
     return new TaskResponse(HEADERS, rows);
+  }
+
+  // Returns the distinct priority levels and review statuses that exist in the
+  // current task data. The UI uses this to populate its filter dropdowns.
+  public FilterOptionsResponse getFilterOptions() {
+    List<PriorityLevel> priorities =
+        tasks.stream()
+            .map(TaskRow::priority)
+            .distinct()
+            .sorted()
+            .collect(Collectors.toList());
+
+    List<ReviewStatus> statuses =
+        tasks.stream()
+            .map(TaskRow::status)
+            .distinct()
+            .sorted()
+            .collect(Collectors.toList());
+
+    return new FilterOptionsResponse(priorities, statuses);
   }
 
   public ReviewResponse saveReview(ReviewRequest request) {
